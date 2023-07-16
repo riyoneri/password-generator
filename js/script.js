@@ -13,10 +13,6 @@ lengthrange.addEventListener("input", evt => {
     lengthHolder.textContent = evt.target.value
 })
 
-// lengthrange.addEventListener("mousedown", evt => {
-//     lengthHolder.textContent = evt.target.value
-// })
-
 btn.addEventListener("click", () => {
   let counter = 2;
   let password = "";
