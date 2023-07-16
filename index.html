@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Password Generator</title>
+</head>
+
+<body class="h-screen bg-[#013c2e] flex flex-col px-10 py-5">
+
+    <nav class="flex justify-end text-3xl text-white">
+        <a href="#">
+            <i class="fa fab fa-github"></i>
+        </a>
+    </nav>
+
+    <div class="flex-1 mt-10 flex flex-col justify-center items-center text-2xl gap-1 text-white">
+        <p>Create a</p>
+        <p class="text-[#26639d] underline underline-offset-[1rem]">Strong password</p>
+        <div class="bg-white px-5 py-2 my-5 rounded-md flex content-between items-center gap-5">
+            <span id="password" class="w-[300px] text-black text-lg"></span>
+            <i class="fa fas fa-copy text-black text-xl focus:text-green-400 active:text-green-400 transition"></i>
+        </div>
+        <div class="text-base flex gap-5">
+            <input type="range" name="length" min="6" max="20" id="length">
+            <span id="lengthHolder">3</span>
+        </div>
+        <div>
+            <button id="btn" class="bg-green-800 px-10 py-2 rounded-md text-lg active:bg-green-950 transition">Generate</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="assets/lib/fontawesome.min.js"></script>
+</body>
+
+</html>
