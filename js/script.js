@@ -19,14 +19,7 @@ lengthrange.addEventListener("input", (evt) => {
 });
 
 copyBtn.addEventListener("click", () => {
-  const range = document.createRange();
-  range.selectNodeContents(passwordHolder);
-
-  window.getSelection().addRange(range);
-
-  document.execCommand("copy");
-
-  window.getSelection().removeAllRanges();
+  navigator.clipboard.writeText(passwordHolder.textContent)
 });
 
 btn.addEventListener("click", () => {

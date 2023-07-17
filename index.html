@@ -24,7 +24,9 @@
         <p>Create a <span class="text-[#26639d] underline underline-offset-[1rem]">strong password</span></p>
         <div class="bg-white px-5 py-2 my-5 rounded-md flex content-between items-center gap-5">
             <span id="password" class="w-[300px] text-black text-lg"></span>
-            <i id="copyBtn" class="fa fas fa-copy text-black text-xl focus:text-green-400 active:text-green-400 transition"></i>
+            <span id="copyBtn" class="group">
+                <i class="fa fas fa-copy text-black text-xl group-focus:text-green-400 group-active:text-green-400 transition"></i>
+            </span>
         </div>
         <div class="text-base flex gap-5">
             <input type="range" value="6" name="length" min="6" max="20" id="length">
@@ -35,8 +37,8 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
     <script src="assets/lib/fontawesome.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
