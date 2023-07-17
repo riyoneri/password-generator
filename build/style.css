@@ -543,10 +543,6 @@ video {
   height: 100vh;
 }
 
-.w-\[100px\] {
-  width: 100px;
-}
-
 .w-\[300px\] {
   width: 300px;
 }
@@ -632,6 +628,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -640,11 +641,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-\[\#26639d\] {

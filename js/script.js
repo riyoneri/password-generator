@@ -1,32 +1,46 @@
 const passwordHolder = document.getElementById("password");
 const btn = document.getElementById("btn");
-const lengthrange = document.getElementById("length")
-const lengthHolder = document.getElementById("lengthHolder")
+const lengthrange = document.getElementById("length");
+const lengthHolder = document.getElementById("lengthHolder");
+const copyBtn = document.getElementById("copyBtn");
 
 const capsLock = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = capsLock.toLowerCase();
 const number = "0123456789";
-const symbol = "@#$%^&*()_+~|{}[]></-=";
+const symbol = "@#$%^&*()_+~[|{]></-}=";
 const allChars = capsLock + lowerCase + number + symbol;
 
-lengthrange.addEventListener("input", evt => {
-    lengthHolder.textContent = evt.target.value
-})
+document.addEventListener("DOMContentLoaded", () => {
+  lengthHolder.textContent = lengthrange.value;
+});
+
+lengthrange.addEventListener("input", (evt) => {
+  lengthHolder.textContent = evt.target.value;
+});
+
+copyBtn.addEventListener("click", () => {
+  const range = document.createRange();
+  range.selectNodeContents(passwordHolder);
+
+  window.getSelection().addRange(range);
+
+  document.execCommand("copy");
+
+  window.getSelection().removeAllRanges();
+});
 
 btn.addEventListener("click", () => {
   let counter = 2;
   let password = "";
   let length = lengthHolder.textContent;
 
-  while (counter > 0) {
-    let selected = Math.floor(Math.random() * counter);
-    if (selected === 1) {
-      password += capsLock[Math.floor(Math.random() * capsLock.length)];
-    } else {
-      password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    }
-
-    counter--;
+  let selected = Math.floor(Math.random() * counter);
+  if (selected === 1) {
+    password += capsLock[Math.floor(Math.random() * capsLock.length)];
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  } else {
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+    password += capsLock[Math.floor(Math.random() * capsLock.length)];
   }
 
   password += number[Math.floor(Math.random() * number.length)];
