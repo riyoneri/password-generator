@@ -19,6 +19,7 @@ lengthrange.addEventListener("input", (evt) => {
 });
 
 copyBtn.addEventListener("click", () => {
+  if(!passwordHolder.textContent) return;
   navigator.clipboard.writeText(passwordHolder.textContent)
   btn.textContent = "Copied"
   btn.disabled = true;
