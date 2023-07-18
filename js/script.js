@@ -20,6 +20,12 @@ lengthrange.addEventListener("input", (evt) => {
 
 copyBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(passwordHolder.textContent)
+  btn.textContent = "Copied"
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = "Generate"
+    btn.disabled = false;
+  }, 2000);
 });
 
 btn.addEventListener("click", () => {
