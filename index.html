@@ -12,7 +12,7 @@
     <title>Password Generator</title>
 </head>
 
-<body class="h-screen bg-[#013c2e] flex flex-col px-10 py-5">
+<body class="h-screen bg-[#013c2e] flex flex-col container px-5 sm:px-10 py-5">
 
     <nav class="flex justify-end text-3xl text-white">
         <a href="https://github.com/riyoneri/password-generator" target="_blank">
@@ -20,22 +20,22 @@
         </a>
     </nav>
 
-    <div class="flex-1 mt-10 flex flex-col justify-center items-center text-2xl gap-1 text-white">
+    <div class="flex-1 flex flex-col justify-center items-center text-base sm:text-2xl gap-1 text-white">
         <p>Create a <span class="text-[#26639d] underline underline-offset-[1rem]">strong password</span></p>
-        <div class="bg-white px-5 py-2 my-5 rounded-md flex content-between items-center gap-5">
-            <span id="password" class="w-[300px] text-black text-lg"></span>
+        <div class="bg-white px-3 py-1 sm:px-5 sm:py-2 my-5 rounded-sm sm:rounded-md flex content-between items-center gap-5 mt-8 sm:mt-14">
+            <span id="password" class="w-[200px] sm:w-[300px] text-black text-sm sm:text-lg"></span>
             <span id="copyBtn" class="group">
                 <i
-                    class="fa fas fa-copy text-black text-xl group-focus:text-green-400 group-active:text-green-400 transition"></i>
+                    class="fa fas fa-copy text-black sm:text-xl group-focus:text-green-400 group-active:text-green-400 transition"></i>
             </span>
         </div>
         <div class="text-base flex gap-5">
             <input type="range" value="6" name="length" min="6" max="20" id="length">
             <span id="lengthHolder"></span>
         </div>
-        <div>
+        <div class="mt-5 sm:mt-10">
             <button id="btn"
-                class="bg-green-800 px-10 py-2 rounded-md text-lg active:bg-green-950 transition">Generate</button>
+                class="bg-green-800 px-14 sm:px-10 py-1 sm:py-2 rounded-sm sm:rounded-md text-base sm:text-lg active:bg-green-950 transition">Generate</button>
         </div>
     </div>
 
